@@ -1,0 +1,354 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: linear-gradient(to bottom, #360000, #000325);
+  color: white;
+  padding: 20px 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.4s ease;
+  z-index: 100;
+  border-radius: 0 30px 30px 0;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+}
+
+li a img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin-bottom: 12px;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Düzeltme */
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: black;
+}
+
+.sidebar.collapsed nav ul li a span {
+  display: none;
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.8); /* Daha okunabilir bir beyaz tonu */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  transition: transform 0.3s ease; /* Sadece transform geçişi */
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.burger {
+  width: 25px;
+  height: 18px;
+  position: relative;
+}
+
+.burger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: black;
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Sadece transform geçişi */
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  top: 7px;
+}
+
+.burger span:nth-child(3) {
+  top: 14px;
+}
+
+#buton-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+
+#buton-container button {
+  background-color: black; 
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, opacity 0.3s ease; /* Geçişleri ayırdım */
+}
+
+#buton-container button:hover {
+  background-color: #333; /* Daha koyu ton */
+}
+
+#chatbot-butonu {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black;
+}
+
+#chatbot-butonu:hover {
+  background-color: black; 
+} 
+
+li {
+  list-style: none;
+}
+
+.Blog-button {
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: black; /* yazı rengi eklendi*/
+}
+
+.Blog-button:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Fare üzerine gelince biraz daha açık bir ton */
+}
+
+.Blog-button .material-icons {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.Blog-button .blog-text {
+  font-size: 16px;
+}
+
+.bloghane-text {
+  position: fixed;
+  top: 35px;
+  left: 70px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  z-index: 102;
+  transition: opacity 0.3s ease;
+  margin-left: 20px;
+}
+
+.bloghane-text.hidden {
+  opacity: 0;
+}
+
+
+
+
+h1, h2, .yazi-basligi { /* Örnek seçiciler: başlık etiketleri veya özel bir sınıf */
+  text-align: center; /* Yatayda ortalar */
+  /* İsteğe bağlı: Dikeyde ortalama için */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-bloghane, p, .blockquote-footer {
+  text-align: center;
+}
+
+
+.searchmt-3{
+  text-align: center;
+}
+.separator {
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 10px 0;
+}
+
+
+.account-header {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 10px;
+  opacity: 0.7;
+}
+.container {
+  background-image: url('images/moroccan-flower.png');
+  background-size: cover;
+  background-position: center;
+}
+.card {
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: rgb(240, 237, 237);
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* içeriği ortalar */
+}
+
+
+.card-img-container {
+    width: 564px;
+    height: 564px;
+    overflow: hidden; /* taşan yerleri gizler */
+  }
+  
+  .card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* resmi kırpar, tam sığdırır */
+  }
+  .card img{
+    filter: brightness(70%); /*resim solukluğu*/
+    transition: all 0.3s ease-in-out; /*geçiş efektri*/
+  }
+  .card:hover img {
+    filter: brightness(100%);
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto; /* ortalamak için */
+    max-width: 1200px; /* içeriğin çok yayılmasını engeller */
+    align-items: stretch;
+}
+
+  .head-bloghane {
+    font-family: "Yeseva One";
+  }
+  .card-title {
+    font-family: "Yeseva One";
+    font-weight: 400;
+  }
+  .theme-toggle {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0 auto;
+  }
+  
+  .theme-toggle .toggle-icon {
+    z-index: 2;
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .theme-toggle .toggle-slider {
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    background: #f9b233;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+  }
+  
+  /* DARK MODE AKTİF OLUNCA BODY RENKLERİ VE TOGGLE DEĞİŞİKLİĞİ */
+  body.dark-mode {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .theme-toggle {
+    background: #333;
+  }
+  
+  body.dark-mode .theme-toggle .toggle-slider {
+    left: 50%;
+    background: #aaa;
+  }
+  
+  body.dark-mode .theme-toggle .sun {
+    color: #888;
+  }
+  
+  body.dark-mode .theme-toggle .moon {
+    color: #fff;
+  }
+  

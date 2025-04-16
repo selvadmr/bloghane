@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>blogHane</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!--metarial icons linki-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <?php include 'sidebar.php'; ?>
+  <div class="sidebar collapsed" id="sidebar">
+    <div class="profile-section"></div>
+    <br>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="foto.png" alt="Profil Fotoğrafı" style="width:50px;height:50px;">
+            <span>Hesabım</span>
+          </a>
+        </li>
+        <li><a href="#"><i class="material-icons">home</i> <span>Ana Sayfa</span></a></li>
+        <li><hr class="separator"></li>
+        <li><hr class="separator"></li>
+        <li>
+          <a href="theme/theme.html" id="theme-toggle">
+            <i class="material-icons">brightness_6</i>
+            <span>Tema Değiştir</span>
+          </a>
+        </li>
+        <br>
+        <br>    
+        <li class="account-header">Hesap</li>
+        <li><a href="help/help.html"><i class="material-icons">help</i> <span>Yardım</span></a></li>
+        <li>
+          <a href="login/giris.html" class="login-in-button">
+            <i class="material-icons">login</i>
+            <span class="login-text">Giriş Yap</span>
+          </a>
+        </li>
+       
+      </ul>
+    </nav>
+  </div>
+        <div id="buton-container">
+            <button id="chat-bot-butonu">ChatBot</button>
+            <li>
+                <a href="Blog Yaz/Blogyaz.html" class="Blog-button">
+                    <i class="material-icons">edit</i>
+                    <span class="Blog-text">Blog Yaz</span>
+                </a>
+            </li>
+        </div>
+  <div class="menu-container">
+    <div class="menu-btn" id="menuToggle">
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <span class="bloghane-text">blogHane</span>
+  </div>
+
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.getElementById("menuToggle");
+    const blogHaneText = document.querySelector('.bloghane-text');
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("collapsed");
+      if (sidebar.classList.contains("collapsed")) {
+        blogHaneText.classList.add("hidden"); // Sidebar kapalıysa yazıyı gizle
+      } else {
+        blogHaneText.classList.remove("hidden"); // Sidebar açıksa yazıyı göster
+      }
+    });
+  </script>
+
+   <script src="bootstrap.js"></script>
+   <!--header-->
+   <div class="container p-5 my-5 bg-light text-dark border">
+       <h1 class="head-bloghane">Bloghane: Kelimelerle Yeni Bir Dünyaya Adım At!</h1>
+       <p>Kelimelerle <mark>özgürce</mark> yolculuğa çıkmaya hazır mısın? Kendi hikayelerini paylaş, başkalarının dünyasına göz at ve düşüncelerini paylaşmanın gücünü keşfet!</p>
+       <footer class="blockquote-footer">Aşağıdaki blog başlıklarına göz atarak başlamaya ne dersin?</footer>
+ </blockquote>
+   </div>
+   <!--search button-->
+   <div class="search mt-3">
+   
+       <div class="d-flex justify-content-center">
+           <div class="input-group" style="width: 300px;">
+               <input type="text" class="form-control" placeholder="Bügün ne okumak istersin?" aria-label="Search" id="searchInput">
+               <button class="btn btn-light border-0 p-1"> <!--şeffaf button-->
+                   <i class="fa fa-search text-secondary"></i> <!--gri ikon-->
+               </button>
+           </div>
+       </div>
+   </div>
+   
+       <!--cards-->
+   <div class="card-container mt-3">
+       <!-- card 1 -->
+       <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+           <div class="col-md-40">
+               <div class="d-flex">
+               <div class="card p-2 my-2">
+                   <img class="card-img-top" src="kiznesesi.jpg" alt="Card image" style="width:100%">
+                   <div class="card-body">
+                   <h4 class="card-title">Kız Neşesi</h4>
+                   <p class="card-text">Moda, kişisel gelişim, makyaj, cilt bakımı ve daha fazlası. Hayatına renk katacak paylaşımlar burada!</p>
+                   <a href="crts/carts.html" class="btn btn-light" data-category="Kız Neşesi">Blogları görüntüle</a>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+   <!-- card 2 -->
+   <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+       <div class="col-md-40">
+           <div class="d-flex">
+   
+           <div class="card p-2 my-2">
+               <img class="card-img-top" src="sinema3.jpg" alt="Card image" style="width:100%">
+               <div class="card-body">
+               <h4 class="card-title">Film ve Diziler</h4>
+               <p class="card-text">Sinemaseverler için eşsiz bir köşe! Film ve diziler hakkındaki fan teorileri burada!</p>
+               <a href="crts/carts.html" class="btn btn-light" data-category="Film ve Diziler">Blogları görüntüle</a>
+               </div>
+           </div>
+           </div>
+       </div>
+   </div>
+       
+   
+       <!-- card 3 -->
+       <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+           <div class="col-md-40">
+               <div class="d-flex">
+
+
+               <div class="card p-2 my-2">
+                   <img class="card-img-top" src="çekirdek kola3.jpg" alt="Card image" style="width:100%">
+                   <div class="card-body">
+                   <h4 class="card-title">Dedikodu</h4>
+                   <p class="card-text">Sosyal medya, ünlüler, trendler ve gündemdeki olaylar üzerine içerikler. Magazin dünyasının en sıcak gelişmeleri burada!</p>
+                   <a href="crts/carts.html" class="btn btn-light" data-category="Dedikodu">Blogları görüntüle</a>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- card 4 -->
+       <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+           <div class="col-md-40">
+               <div class="d-flex">
+
+
+               <div class="card p-2 my-2">
+                   <img class="card-img-top" src="futboll.jpg" alt="Card image" style="width:100%">
+                   <div class="card-body">
+                   <h4 class="card-title">Oyun ve Futbol</h4>
+                   <p class="card-text">Kız neşesinden sonra erkekleri unuttuk sanmayın. Oyuncular ve futbolseverler için ayrılmış bir dünya!</p>
+                   <a href="crts/carts.html" class="btn btn-light" data-category="Oyun ve Futbol">Blogları görüntüle</a>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- card 5 -->
+       <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+           <div class="col-md-40">
+               <div class="d-flex">
+               <div class="card p-2 my-2">
+                   <img class="card-img-top" src="kitaplar.jpg" alt="Card image" style="width:100%">
+                   <div class="card-body">
+                   <h4 class="card-title">Kitaplar ve Şiirler</h4>
+                   <p class="card-text">Farklı türlerdeki kitap incelemelerinden en sevdiğiniz şiirlerin derin anlamlarına kadar her şey burada!</p>
+                   <a href="crts/carts.html" class="btn btn-light" data-category="Kitaplar ve Şiirler">Blogları görüntüle</a>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+   <!-- card 6 -->
+   <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+       <div class="col-md-40">
+           <div class="d-flex">
+   
+           <div class="card p-2 my-2">
+               <img class="card-img-top" src="tarihhh.jpg" alt="Card image" style="width:100%">
+               <div class="card-body">
+               <h4 class="card-title">Tarih ve Siyaset</h4>
+               <p class="card-text">Zamanda yolculuk yaparak bugünün dünyasını anlamaya çalışıyoruz. Geçmişi bilmeden geleceği şekillendiremeyiz!</p>
+               <a href="crts/carts.html" class="btn btn-light" data-category="Tarih ve Siyaset">Blogları görüntüle</a>
+               </div>
+           </div>
+           </div>
+       </div>
+   </div>
+       
+   
+       <!-- card 7 -->
+       <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+           <div class="col-md-40">
+               <div class="d-flex">
+
+
+               <div class="card p-2 my-2">
+                   <img class="card-img-top" src="randbilgi.jpg" alt="Card image" style="width:100%">
+                   <div class="card-body">
+                   <h4 class="card-title">Random Bilgiler</h4>
+                   <p class="card-text">Öylesine bir şeyler okuyup yeni şeyler mi keşfetmek istiyorsun? O zaman burası tam sana göre!</p>
+                   <a href="crts/carts.html" class="btn btn-light" data-category="Random Bilgiler">Blogları görüntüle</a>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+
+       <!-- card 8 -->
+       <div class="row g-30"> <!-- Kartlar arasına boşluk ekler -->
+           <div class="col-md-40">
+               <div class="d-flex">
+
+
+               <div class="card p-2 my-2">
+                   <img class="card-img-top" src="ilişkiler.jpg" alt="Card image" style="width:100%">
+                   <div class="card-body">
+                   <h4 class="card-title">İlişkiler</h4>
+                   <p class="card-text">İnsan ilişkileri üzerine bir keşif yolculuğu!</p>
+                   <a href="crts/carts.html" class="btn btn-light" data-category="İlişkiler">Blogları görüntüle</a>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+
+       
+   </div>
+   </div>
+ </div>
+
+
+
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script> <!--js-->
+<script src="fnc.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yardım Formu</title>
+  <link rel="stylesheet" href="yardim.css"> <!-- CSS dosyasını buradan bağlıyoruz -->
+  <link rel="stylesheet" href="help.css" />
+</head>
+<body>
+
+  <div class="yardim-formu">
+    <h2>Yardım Talebi</h2>
+    <form action="mailto:seninmailin@example.com" method="POST" enctype="text/plain">
+      <label for="email">E-posta adresin:</label>
+      <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+
+      <label for="yardim">Yardım talebin:</label>
+      <textarea id="yardim" name="yardim" rows="5" placeholder="Nasıl yardımcı olabiliriz?" required></textarea>
+
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+
+</body>
+</html>

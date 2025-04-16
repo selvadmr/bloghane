@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloglar</title>
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="blog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One&display=swap" rel="stylesheet">
+    <!--çöp kutusu yorum silme-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+</head>
+<body>
+    
+    <div class="container py-5">
+        <h1 class="main-title">
+            <span class="blog-title">Blog Yazıları</span> | 
+            <span class="blog-name">BlogHane</span>
+          </h1>
+        <div class="row g-4 justify-content-center">
+            <!-- Blog 1 -->
+            <div class="col-12 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-title">Hayatın Tadı</div>
+                    <div class="blog-user">ayseyilmaz</div>
+                    <div class="blog-text">
+                        Bu yazıda hayatın bize sunduğu küçük mutlulukları konuşacağız. Sabah kahvesi, yürüyüşte hissedilen rüzgar...
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                        <div>
+                            <i class="bi bi-heart like-btn me-1" style="cursor: pointer;"></i>
+                            <span class="like-count">0</span> Beğeni
+                            <i class="bi bi-chat-left-text ms-3 me-1 text-secondary" style="cursor: pointer;"></i>
+                            <span class="comment-count">0</span> Yorum
+                        </div>
+                    </div>
+                    <!-- yorum alanı -->
+                    <div class="comment-section mt-3 px-2">
+                        <div class="comments"></div>
+                        <div class="input-group mt-2">
+                          <input type="text" class="form-control comment-input" placeholder="Bu blog hakkındaki düşüncelerini buraya yazabilirisn...">
+                          <button class="send-btn btn add-comment-btn" title="Gönder">
+                            <i class="send-icon bi bi-send-fill"></i>
+                          </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- Blog 2 -->
+            <div class="col-12 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-title">Gecenin Sessizliği</div>
+                    <div class="blog-user">mehmetk</div>
+                    <div class="blog-text">
+                        Geceyle gelen yalnızlık mı yoksa huzur mu? Bu yazıda gece saatlerinde düşen duyguları ele alıyorum...
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                        <div>
+                            <i class="bi bi-heart like-btn me-1" style="cursor: pointer;"></i>
+                            <span class="like-count">0</span> Beğeni
+                            <i class="bi bi-chat-left-text ms-3 me-1 text-secondary" style="cursor: pointer;"></i>
+                            <span class="comment-count">0</span> Yorum
+                        </div>
+                    </div>
+                    <!-- yorum alanı -->
+                    <div class="comment-section mt-3 px-2">
+                        <div class="comments"></div>
+                        <div class="input-group mt-2">
+                          <input type="text" class="form-control comment-input" placeholder="Bu blog hakkındaki düşüncelerini buraya yazabilirisn...">
+                          <button class="send-btn btn add-comment-btn" title="Gönder">
+                            <i class="send-icon bi bi-send-fill"></i>
+                          </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <!-- Blog 3 -->
+            <div class="col-12 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-title">Yeni Başlangıçlar</div>
+                    <div class="blog-user">zeynepo</div>
+                    <div class="blog-text">
+                        Her bitiş aslında yeni bir başlangıçtır derler. Bazen kaybolmuş hissetmek yeniden doğmanın ilk adımıdır...
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mt-3 px-2">
+                        <div>
+                            <i class="bi bi-heart like-btn me-1" style="cursor: pointer;"></i>
+                            <span class="like-count">0</span> Beğeni
+                            <i class="bi bi-chat-left-text ms-3 me-1 text-secondary" style="cursor: pointer;"></i>
+                            <span class="comment-count">0</span> Yorum
+                        </div>
+                    </div>
+                    <!-- yorum alanı -->
+                    <div class="comment-section mt-3 px-2">
+                        <div class="comments"></div>
+                        <div class="input-group mt-2">
+                          <input type="text" class="form-control comment-input" placeholder="Bu blog hakkındaki düşüncelerini buraya yazabilirisn...">
+                          <button class="send-btn btn add-comment-btn" title="Gönder">
+                            <i class="send-icon bi bi-send-fill"></i>
+                          </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+      <!-- oluştur butonu -->
+      <button class="custom-write-btn" title="Yeni Yazı Ekle">
+        <i class="bi bi-pencil-square"></i>
+      </button>
+      
+      <!-- footer -->
+      <footer class="text-center py-4 text-muted">
+        © 2025 BlogHane.
+     </footer>
+      
+
+    <script src="blog.js"></script>
+    <script src="fnc.js"></script>
+</body>
+</html>

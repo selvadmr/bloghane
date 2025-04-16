@@ -1,0 +1,89 @@
+.head-text{
+    color: darkslategrey;
+    text-align: center;
+    size: 40px;
+    padding: 30px;
+    font-family: "Yeseva One";
+
+}
+body {
+    font-family: "Outfit";
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.write-container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: rgb(44, 43, 43);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.save-draft-btn, .cancel-btn, .submit-btn {
+    padding: 1px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-draft-btn {
+    background-color: #e7c390;
+    color: white;
+}
+
+.save-draft-btn:hover {
+    background-color: #f1bb6f;
+}
+
+.cancel-btn {
+    background-color: #da7e7b;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #c4625e;
+}
+
+.submit-btn {
+    background-color: #8eccdf;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #60b8d3;
+}
